@@ -1,0 +1,15 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	dnsserver.home.local. jesse.localhost. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	dnsserver.home.local.
+1.0.0	IN	PTR	localhost.
+2     IN  PTR chef.home.local
+3     IN  PTR gitlabs.home.local

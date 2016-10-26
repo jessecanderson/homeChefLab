@@ -1,0 +1,3 @@
+source "https://supermarket.chef.io"
+
+cookbook "mysql", "~> 8.0.0"
