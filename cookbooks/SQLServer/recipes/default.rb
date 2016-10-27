@@ -10,6 +10,14 @@
 # include_recipe 'apt::default'
 # include_recipe 'SQLServer::database'
 
+package 'mysql-server' do
+  action :install
+end
+
+package 'mysql' do
+  action :install
+end
+
 mysql_client 'default' do
   action :create
 end
