@@ -12,12 +12,13 @@ platforms:
   - name: centos65
     driver:
      box:	learningchef/centos65
-     box_url: 	learningchef/centos65
-
+     box_url:	learningchef/centos65
+     network:
+     - ["private_network", {ip: "192.168.33.7"}]
 suites:
   - name: default
     run_list:
-      - recipe[motd::default]
+      - recipe[apache::default]
     verifier:
       inspec_tests:
         - test/recipes

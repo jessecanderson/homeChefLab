@@ -9,15 +9,12 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos65
-    driver:
-     box:	learningchef/centos65
-     box_url: 	learningchef/centos65
+  - name: centos-7.2
 
 suites:
   - name: default
     run_list:
-      - recipe[motd::default]
+      - recipe[motd-attributes::default]
     verifier:
       inspec_tests:
         - test/recipes
