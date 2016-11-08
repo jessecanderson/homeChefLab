@@ -17,15 +17,15 @@
 #  action [:enable, :start]
 #end
 
-windows_feature 'IIS-WebServer' do
+package 'IIS-WebServer' do
   action :install
 end
 
-windows_feature 'TelnetClient' do
+package 'TelnetClient' do
   action :install
 end
 
-windows_feature 'TelnetServer' do
+package 'TelnetServer' do
   action :install
 end
 
