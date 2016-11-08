@@ -10,10 +10,10 @@ end
 remote_file chrome_installer do
   action :create_if_missing
   source chrome_url
-  #notifies :run, 'windows_package[Google Chrome]', :immediately
+  #notifies :run, 'windows_package[ChromeStandaloneSetup64.exe]', :immediately
 end
 
-windows_package 'Google Chrome' do
+windows_package 'ChromeStandaloneSetup64.exe' do
   source chrome_installer
   action :nothing
 end
