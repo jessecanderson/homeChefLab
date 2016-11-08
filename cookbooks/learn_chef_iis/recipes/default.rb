@@ -17,24 +17,24 @@
 #  action [:enable, :start]
 #end
 
-package 'IIS-WebServer' do
-  action :install
-end
+#windows_package 'IIS-WebServer' do
+#  action :install
+#end
 
-package 'TelnetClient' do
-  action :install
-end
+#windows_package 'TelnetClient' do
+#  action :install
+#end
 
-package 'TelnetServer' do
-  action :install
-end
+#windows_package 'TelnetServer' do
+#  action :install
+#end
 
-service 'w3svc' do
-  action [:enable, :start]
-end
+#service 'w3svc' do
+#  action [:enable, :start]
+#end
 
-template 'c:\inetpub\wwwroot\Default.htm' do
-  source 'Default.htm.erb'
-end
+#template 'c:\inetpub\wwwroot\Default.htm' do
+#  source 'Default.htm.erb'
+#end
 
 include_recipe 'learn_chef_iis::install_notepad'

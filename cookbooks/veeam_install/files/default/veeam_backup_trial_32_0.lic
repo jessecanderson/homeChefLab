@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Licenses><License><![CDATA[CPU sockets (Hyper-V)=0
+CPU sockets (vSphere)=32
+Company=iVision
+Description=Copyright 2016 Veeam, Inc. All Rights Reserved. The Software Product is protected by copyright and other intellectual property laws and treaties. Veeam or its suppliers own the title, copyright, and other intellectual property rights in the Software Product. Veeam reserves all rights not expressly granted to you in EULA. The Software Product is licensed, not sold. Veeam grants to you a nonexclusive nontransferable license to use the Software Product, provided that you agree with EULA.
+E-mail=janderson@ivision.com
+Edition=Enterprise Plus
+Expiration date=08/12/2016
+First name=Jesse
+Last name=Anderson
+License information=License type:\tEvaluation License\nLicensed to:\tiVision\nContact person:\tJesse Anderson\nCPU sockets (vSphere):\t32\nEdition:       \tEnterprise Plus
+License type=Evaluation License
+Product=Veeam Backup and Replication
+Support expiration date=08/12/2016
+Version=9.x
+Signature=36F3E3EA8FB071DB0901875649937C6E4ACAAEC26A8A82BAA1A52DB796CD69BFB0D56093C488287A918433FCC3BFC3DA466BB591A18BD5CC20DAF18DBF42749AE34A6125B54070AA93865443760F7F84DA17253011B6B11BF67543E0697DA46FD22727209470280F869C018AF9CFA5E2683E9DC844020C84F7E45264078C9980
+]]></License></Licenses>
