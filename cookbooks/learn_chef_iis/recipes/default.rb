@@ -38,3 +38,4 @@
 #end
 
 include_recipe 'learn_chef_iis::install_notepad'
+include_recipe 'learn_chef_iis::install_chrome'
