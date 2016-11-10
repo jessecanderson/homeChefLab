@@ -4,7 +4,7 @@ maintainer_email 'you@example.com'
 license 'all_rights'
 description 'Installs/Configures veeam_install'
 long_description 'Installs/Configures veeam_install'
-version '0.1.3'
+version '0.1.4'
 
 # If you upload to Supermarket you should set this so your cookbook
 # gets a `View Issues` link
