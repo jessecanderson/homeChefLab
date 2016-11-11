@@ -23,11 +23,9 @@ end
 # Mounting the Veeam Server ISO.
 powershell_script 'Mount_Veeam_ISO' do
   code <<-EOH
-    $isattached=Get-DiskImage -ImagePath #{package_local_path}
 
-    if ($isattached.Attached -eq $False) {
       Mount-DiskImage -ImagePath "#{package_local_path}"
-    }
+
 
   EOH
   guard_interpreter :powershell_script

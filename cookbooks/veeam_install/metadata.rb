@@ -5,6 +5,7 @@ license 'all_rights'
 description 'Installs/Configures veeam_install'
 long_description 'Installs/Configures veeam_install'
 version '0.1.4'
+depends 'windows'
 
 # If you upload to Supermarket you should set this so your cookbook
 # gets a `View Issues` link
