@@ -20,14 +20,19 @@ cookbook_file "#{Chef::Config[:file_cache_path]}/veeam_backup_trial_32_0.lic" do
   source "veeam_backup_trial_32_0.lic"
 end
 
-# Mounting the SQL Server 2014 SP1 ISO.
+# Mounting the Veeam Server ISO.
 powershell_script 'Mount_Veeam_ISO' do
   code <<-EOH
-  Mount-DiskImage -ImagePath "#{package_local_path}"
+    $isattached=Get-DiskImage -ImagePath #{package_local_path}
+
+    if ($isattached.Attached -eq $False) {
+      Mount-DiskImage -ImagePath "#{package_local_path}"
+    }
+
   EOH
   guard_interpreter :powershell_script
   #notifies :run, 'execute[veeam_installer]', :immediately
-  notifies :run, 'powershell_script[Dismount_Veeam_ISO]', :immediately
+  #notifies :run, 'powershell_script[Dismount_Veeam_ISO]', :immediately
   #not_if '($SQL_Server_Service = (gwmi -class Win32_Service | Where-Object {$_.Name -eq "MSSQLSERVER"}).Name -eq "MSSQLSERVER")'
 end
 
