@@ -16,3 +16,10 @@ windows_package 'ChromeStandaloneSetup64.exe' do
   source chrome_installer
   action :nothing
 end
+
+
+$diskimage='C:\Users\cnorman\Downloads\ucs-c3160-huu-2.0.13f.iso'
+$isattached=Get-DiskImage -ImagePath $diskimage
+if ($isattached.Attached -eq $False) {
+write-host 'Not Attached'
+} 
