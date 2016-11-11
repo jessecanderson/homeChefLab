@@ -8,7 +8,8 @@ package_url = node['veeam']['url']
 package_name = ::File.basename(package_url)
 package_local_path = "#{Chef::Config[:file_cache_path]}/#{package_name}"
 license_local_path = "#{Chef::Config[:file_cache_path]}/veeam_backup_trial_32_0.lic"
-installer_path = "E:/Backup/Server.64.msi"
+veeam_backup_catalog_installer = "E:/Catalog/VeeamBackupCatalog64.msi"
+veeam_installer_path = "E:/Backup/Server.64.msi"
 
 remote_file package_local_path do
   action :create_if_missing
@@ -32,6 +33,10 @@ powershell_script 'Mount_Veeam_ISO' do
   #notifies :run, 'execute[veeam_installer]', :immediately
   #notifies :run, 'powershell_script[Dismount_Veeam_ISO]', :immediately
   #not_if '($SQL_Server_Service = (gwmi -class Win32_Service | Where-Object {$_.Name -eq "MSSQLSERVER"}).Name -eq "MSSQLSERVER")'
+end
+
+execute 'veeam_backup_catalog' do
+  command "msiexec.exe /qn /i \"#{veeam_backup_catalog_installer}\" VBRC_SERVICE_USER=\"veeam_srvc\" VBRC_SERVICE_PASSWORD=\"Password1\" "
 end
 
 execute 'veeam_installer' do
